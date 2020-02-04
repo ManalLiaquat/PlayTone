@@ -1,4 +1,8 @@
 import {Platform, Dimensions} from 'react-native';
+import {
+  widthPercentageToDP as WP,
+  heightPercentageToDP as HP,
+} from 'react-native-responsive-screen';
 
 // PLATFORM
 const PLATFORM_OS = Platform.OS;
@@ -9,5 +13,7 @@ const DIMENSIONS = {SCREEN_WIDTH, SCREEN_HEIGHT};
 const PRIMARY = '#FFFFFF';
 const SECONDARY = '#AAAAAA';
 const COLORS = {PRIMARY, SECONDARY};
+// RESPONSIVE SCREEN
+const PERCENTAGE_TO_DP = {WP, HP};
 
-export {PLATFORM_OS, DIMENSIONS, COLORS};
+export {PLATFORM_OS, DIMENSIONS, COLORS, PERCENTAGE_TO_DP};

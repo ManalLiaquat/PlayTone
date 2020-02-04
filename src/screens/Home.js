@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
-import MyComponent from '../components/MyComponent';
-import {PLATFORM_OS} from '../constants/enums';
+import Wrapper from '../components/Wrapper';
 
 const HomeScreen = () => {
   const [sampleState, setSampleState] = useState('');
@@ -27,13 +26,10 @@ const HomeScreen = () => {
 
   return (
     <View>
-      <Text>Home Screen</Text>
-      {_sampleMethodName_jsx()}
-      <MyComponent
-        text={
-          PLATFORM_OS === 'android' ? 'This is Android phone' : 'This is iPhone'
-        }
-      />
+      <Wrapper>
+        <Text>Home Screen</Text>
+        {_sampleMethodName_jsx()}
+      </Wrapper>
     </View>
   );
 };
